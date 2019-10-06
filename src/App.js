@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import Table from './Table'
 
 
+
 class App extends Component {
-  render() {
-    const characters = [
+  state = {
+    characters: [
       {
         name: 'Charlie',
         job: 'Janitor',
@@ -21,7 +22,10 @@ class App extends Component {
         name: 'Dennis',
         job: 'Bartender',
       },
-    ]
+    ],
+  }
+  render() {
+    const { characters } = this.state
     return (
       <div className="container">
         <Table characterData={characters} />
