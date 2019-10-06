@@ -27,6 +27,10 @@ class Table extends Component {
             <td>Dennis</td>
             <td>Bartender</td>
           </tr>
+          <tr>
+            <td>Amo</td>
+            <td>a Profesisonal Potioneer</td>
+          </tr>
         </tbody>
       </table>
     )
