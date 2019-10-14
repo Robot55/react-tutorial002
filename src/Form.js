@@ -17,6 +17,10 @@ class Form extends Component {
     this.setState(this.initialState)  // sets form back to initial state (clear)
   }
 
+  handleKeyUp = event => {
+    if (event.keyCode === 13) return this.submitForm()
+  }
+
   handleChange = event => {
     const { name, value } = event.target
   
@@ -29,7 +33,7 @@ class Form extends Component {
     const { name, job } = this.state;
   
     return (
-      <form>
+      <form onKeyUp={this.handleKeyUp}>
         <label>Name</label>
         <input
           type="text"
