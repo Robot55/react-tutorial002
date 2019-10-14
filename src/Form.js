@@ -11,6 +11,12 @@ class Form extends Component {
     this.state = this.initialState
   }
 
+  // this method needs to be run/called from a "submit" button
+  submitForm = () => {
+    this.props.handleSubmit(this.state) // runs the handleSubmit method on this state
+    this.setState(this.initialState)  // intialize (clear) the form state after submitted
+  }
+
   handleChange = event => {
     const { name, value } = event.target
   
